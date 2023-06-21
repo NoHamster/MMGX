@@ -1,0 +1,18 @@
+[package]
+name = "mmgx"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+debug = false
+strip = true  # Automatically strip symbols from the binary.
+lto = true
+codegen-units = 1
+panic = "abort"
+
+
+[dependencies]
+clap = { version = "4.2.7", features = ["derive"] }
+logos = "0.13.0"
